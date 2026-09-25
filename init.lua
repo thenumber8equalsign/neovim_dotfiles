@@ -3,6 +3,11 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	command = [[%s/\s\+$//e]],
 })
 
+vim.api.nvim_create_user_command('ClangFormat', function()
+	local output = vim.fn.system('clang-format', vim.fn.getline(1, '$'))
+	vim.fn.setline(1, vim.fn.split(output, '\n'))
+end, {})
+
 vim.cmd [[
 	colorscheme slate
 ]]

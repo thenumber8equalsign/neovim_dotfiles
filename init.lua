@@ -27,7 +27,8 @@ vim.cmd [[
 	set clipboard+=unnamedplus
 ]]
 
+-- the last character should be right before the white bar
 vim.cmd [[
-	set colorcolumn=80
+	set colorcolumn=81
 	highlight ColorColumn guibg=darkgray
 ]]

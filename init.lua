@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
-	command = [[%s/\s\+$//e]],
+	command = [[%s/\s\+$//e | %s/\n\+\%$//e ]],
 })
 
 vim.api.nvim_create_user_command('ClangFormat', function()

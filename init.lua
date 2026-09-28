@@ -1,6 +1,11 @@
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
-	command = [[%s/\s\+$//e | %s/\n\+\%$//e ]],
+	callback = function()
+		vim.cmd [[
+			%s/\s\+$//e
+			%s/\n\+\%$//e
+		]]
+	end
 })
 
 vim.api.nvim_create_user_command('ClangFormat', function()
@@ -10,25 +15,13 @@ end, {})
 
 vim.cmd [[
 	colorscheme slate
-]]
+	highlight Normal guibg=none ctermbg=none
+	highlight NonText guibg=none ctermbg=none
 
-vim.cmd [[
-	highlight Normal guibg=none
-	highlight NonText guibg=none
-	highlight Normal ctermbg=none
-	highlight NonText ctermbg=none
-]]
-
-vim.cmd [[
 	set number
-]]
 
-vim.cmd [[
 	set clipboard+=unnamedplus
-]]
 
--- the last character should be right before the white bar
-vim.cmd [[
 	set colorcolumn=81
-	highlight ColorColumn guibg=darkgray
+	highlight ColorColumn guibg=darkgray ctermbg=darkgray
 ]]

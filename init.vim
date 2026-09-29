@@ -21,4 +21,5 @@ set clipboard+=unnamedplus
 
 set colorcolumn=81
 highlight ColorColumn guibg=darkgray ctermbg=darkgray
+
 set cinoptions+=:0

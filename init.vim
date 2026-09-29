@@ -12,8 +12,8 @@ command! ClangFormat call ClangFormat()
 autocmd BufWritePre * call ClearWhiteSpace()
 
 colorscheme slate
-highlight Normal guibg=none ctermbg=none
-highlight NonText guibg=none ctermbg=none
+highlight Normal guibg=NONE ctermbg=NONE
+highlight NonText guibg=NONE ctermbg=NONE
 
 set number
 
@@ -23,3 +23,5 @@ set colorcolumn=81
 highlight ColorColumn guibg=darkgray ctermbg=darkgray
 
 set cinoptions+=:0
+
+syntax on

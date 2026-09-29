@@ -25,3 +25,5 @@ highlight ColorColumn guibg=darkgray ctermbg=darkgray
 set cinoptions+=:0
 
 syntax on
+set ignorecase
+set smartcase

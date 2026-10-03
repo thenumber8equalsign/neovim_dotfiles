@@ -24,6 +24,9 @@ highlight ColorColumn guibg=darkgray ctermbg=darkgray
 
 set cinoptions+=:0
 
+set ignorecase
+set smartcase
+
 syntax on
 
 hi @variable guifg=#ffffff

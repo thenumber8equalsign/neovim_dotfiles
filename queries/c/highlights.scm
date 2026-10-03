@@ -246,6 +246,9 @@
   function: (identifier) @function.builtin)
   (#lua-match? @function.builtin "^__builtin_"))
 
+((argument_list
+   (identifier) @variable))
+
 ((call_expression
   function: (identifier) @function.builtin)
   (#has-ancestor? @function.builtin attribute_specifier))

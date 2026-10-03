@@ -1,2 +1,2 @@
 vim.cmd [[so ~/.config/nvim/vimrc]]
-pcall vim.treesitter.start()
+pcall(vim.treesitter.start())

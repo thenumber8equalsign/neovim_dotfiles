@@ -186,7 +186,7 @@
 (primitive_type) @type
 
 (sized_type_specifier
-  _ @type.builtin
+  _ @type
   type: _?)
 
 ((identifier) @constant

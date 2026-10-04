@@ -139,7 +139,7 @@
 
 (escape_sequence) @string.escape
 
-(null) @constant.builtin
+(null) @constant
 
 (number_literal) @number
 
@@ -188,9 +188,6 @@
 (sized_type_specifier
   _ @type
   type: _?)
-
-((identifier) @constant
-  (#lua-match? @constant "^[A-Z][A-Z0-9_]+$"))
 
 (preproc_def
   (preproc_arg) @constant
@@ -253,6 +250,9 @@
   function: (identifier) @function.builtin)
   (#has-ancestor? @function.builtin attribute_specifier))
 
+((identifier) @constant
+  (#lua-match? @constant "^[A-Z][A-Z0-9_]+$"))
+
 ; Preproc def / undef
 (preproc_def
   name: (_) @constant.macro)
@@ -296,13 +296,13 @@
 
 ; Parameters
 (parameter_declaration
-  declarator: (identifier) @variable.parameter)
+  declarator: (identifier) @variable)
 
 (parameter_declaration
-  declarator: (array_declarator) @variable.parameter)
+  declarator: (array_declarator) @variable)
 
 (parameter_declaration
-  declarator: (pointer_declarator) @variable.parameter)
+  declarator: (pointer_declarator) @variable)
 
 ; K&R functions
 ; To enable support for K&R functions,

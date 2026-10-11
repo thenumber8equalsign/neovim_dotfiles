@@ -32,4 +32,5 @@ let g:python_recommended_style=0
 
 syntax on
 
-hi @variable guifg=#ffffff
+hi link @variable Identifier
+hi Identifier guifg=#ffffff

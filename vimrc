@@ -16,6 +16,7 @@ highlight Normal guibg=NONE ctermbg=NONE
 highlight NonText guibg=NONE ctermbg=NONE
 
 set number
+set relativenumber
 
 set clipboard+=unnamedplus
 

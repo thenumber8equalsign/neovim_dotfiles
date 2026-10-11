@@ -1,5 +1,5 @@
 return {
-	cmd = { 'pylsp' },
+	cmd = { 'ruff', 'server' },
 	filetypes = { 'python' },
 	root_markers = {
 		'.git',

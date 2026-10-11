@@ -30,6 +30,6 @@ vim.api.nvim_create_user_command('StartLSP',
 )
 
 vim.lsp.enable('clangd')
-vim.lsp.enable('pylsp')
+vim.lsp.enable('ruff')
 
 vim.diagnostic.enable(true)

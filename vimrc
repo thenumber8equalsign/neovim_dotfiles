@@ -34,3 +34,6 @@ syntax on
 
 hi link @variable Identifier
 hi Identifier guifg=#ffffff
+
+set signcolumn=yes
+hi SignColumn guibg=NONE ctermbg=NONE

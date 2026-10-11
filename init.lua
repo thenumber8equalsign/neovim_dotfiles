@@ -1,11 +1,13 @@
-vim.cmd [[so ~/.config/nvim/vimrc]]
+vim.cmd([[so ~/.config/nvim/vimrc]])
 
--- for some dumbass reason .h is c++ by default???
-vim.filetype.add {
-	pattern = {
-		['.*/*.h'] = 'c'
+vim.filetype.add({
+	extension = {
+		h = 'c', -- for some dumbass reason .h is c++ by default???
+	},
+	filename = {
+		['~/.bashrc'] = 'bash',
 	}
-}
+})
 
 vim.api.nvim_create_autocmd('BufEnter', {
 	callback = function(ev)

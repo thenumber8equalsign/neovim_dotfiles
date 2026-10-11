@@ -27,6 +27,8 @@ set cinoptions+=:0
 set ignorecase
 set smartcase
 
+let g:python_recommended_style=0
+
 syntax on
 
 hi @variable guifg=#ffffff

@@ -1,11 +1,21 @@
 function ClearWhiteSpace()
-	%s/\s\+$//e
-	%s/\n\+\%$//e
+	%s/\s\+$//eg
+	%s/\n\+\%$//eg
 endfunction
 
 function ClangFormat()
 	let output = system("clang-format", getline(1, "$"))
-	call setline(1, split(output, '\n'))
+	let l = line(".")
+	let c = col(".")
+	let c = c - 1
+	silent %d
+	call append(0, split(output, "\n"))
+	%s/\n\+\%$//eg
+	execute "normal" l .. "G"
+	execute "normal" "0"
+	if c
+		execute "normal" c .. "l"
+	endif
 endfunction
 
 command! ClangFormat call ClangFormat()

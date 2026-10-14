@@ -47,3 +47,4 @@ hi Identifier guifg=#ffffff
 
 set signcolumn=yes
 hi SignColumn guibg=NONE ctermbg=NONE
+set mouse=

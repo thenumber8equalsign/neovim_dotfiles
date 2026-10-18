@@ -27,6 +27,8 @@ highlight NonText guibg=NONE ctermbg=NONE
 
 set number
 set relativenumber
+let g:netrw_bufsettings="noma nomod nu nobl nowrap ro rnu"
+set cursorline
 
 set clipboard+=unnamedplus
 

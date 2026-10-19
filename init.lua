@@ -15,20 +15,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
 	end,
 })
 
-vim.api.nvim_create_user_command('StopLSP',
-	function(opt)
-		vim.lsp.enable(opt.fargs[1], false)
-	end,
-	{ nargs = 1 }
-)
-
-vim.api.nvim_create_user_command('StartLSP',
-	function(opt)
-		vim.lsp.enable(opt.fargs[1])
-	end,
-	{ nargs = 1 }
-)
-
 vim.lsp.enable('clangd')
 vim.lsp.enable('ruff')
 
